@@ -1,0 +1,38 @@
+{% extends "AppCoder/padre.html" %}
+
+{% load static %}
+
+{% block contenidoQueCambia %}
+
+<!--Aquí va lo que cambia, y lo asociado a está vista :) -->
+<h1>Cursos</h1>
+<br>
+
+<h2>Buscar Camada:</h2>
+
+<form action="/AppCoder/buscar/" method="GET">
+    <input type="number" name="camada" id="camada">
+    <input type="submit" value="Buscar">
+</form>
+<br>
+<br>
+<h2>Lista de Cursos:</h2>
+<br>
+<table class="table">
+    <tr>
+        <th>Curso</th>
+        <th>Camada</th>
+        <th>Número de Día</th>
+    </tr>
+    {% for c in cursos %}
+        <tr>
+            <td>{{c.curso}}</td>
+            <td>{{c.camada}}</td>
+            <td>{{c.numero_dia}}</td>
+        </tr>
+    {% endfor %}
+</table>
+
+<a class="navbar-brand" href="{% url 'Cursos' %}">Regresar</a>
+</p>
+{% endblock %}

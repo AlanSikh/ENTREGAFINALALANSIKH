@@ -1,0 +1,30 @@
+{% extends "AppCoder/padre.html" %}
+
+{% load static %}
+
+{% block contenidoQueCambia %}
+
+<!--Aquí va lo que cambia, y lo asociado a está vista :) -->
+<h1>Cursos</h1>
+<br>
+<br>
+<div class="container">
+    <a class="navbar-brand" href="{% url 'CursosLista' %}">Ver lista de cursos</a>
+</div>
+<div class="container">
+    <a class="navbar-brand" href="{% url 'New' %}">Crear un curso</a>
+</div>
+<div class="container">
+    <a class="navbar-brand" href="{% url 'Buscarc' %}">Buscar un curso</a>
+</div>
+<div class="container">
+    <a class="navbar-brand" href="{% url 'List' %}">Modificar un curso</a>
+</div>
+
+<br>
+<br>
+<br>
+<br>
+<br>
+</p>
+{% endblock %}
